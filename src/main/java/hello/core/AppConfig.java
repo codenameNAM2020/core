@@ -9,6 +9,7 @@ import hello.core.member.MemberServiceImpl;
 import hello.core.member.MemoryMemberRepository;
 import hello.core.order.OrderService;
 import hello.core.order.OrderServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -28,6 +29,9 @@ public class AppConfig {
     //call AppConfig.memberService
     //call AppConfig.memberRepository
     //call AppConfig.orderService
+
+    //의존관계 자동 주입
+//    @Autowired MemberRepository memberRepository;
 
     //스프링 컨테이너에 등록
     @Bean
