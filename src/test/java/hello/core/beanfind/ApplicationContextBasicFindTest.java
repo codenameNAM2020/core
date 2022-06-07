@@ -20,8 +20,6 @@ class ApplicationContextBasicFindTest {
     @DisplayName("빈 이름으로 조회")
     void findBeanByName() {
         MemberService memberService = ac.getBean("memberService", MemberService.class);
-//        System.out.println("memberService = " + memberService);
-//        System.out.println("memberService.getClass() = " + memberService.getClass());
 
         //Alt + Enter
         assertThat(memberService).isInstanceOf(MemberServiceImpl.class);
@@ -45,9 +43,6 @@ class ApplicationContextBasicFindTest {
     @Test
     @DisplayName("빈 이름으로 조회 X")
     void findBeanByNameX() {
-//        ac.getBean("xxxx", MemberService.class);
-//        //오류가 무조건 남
-//        MemberService xxxx = ac.getBean("xxxx", MemberService.class);
         assertThrows(NoSuchBeanDefinitionException.class,
                 () -> ac.getBean("xxxx", MemberService.class));
     }

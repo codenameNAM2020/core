@@ -20,14 +20,6 @@ import org.springframework.context.annotation.FilterType;
 )
 public class AutoAppConfig {
 
-////    @Autowired MemberRepository memberRepository;
-////    @Autowired DiscountPolicy discountPolicy;
-//
-//    @Bean
-//    OrderService orderService(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
-//        return new OrderServiceImpl(memberRepository, discountPolicy);
-//    }
-
     @Bean(name = "memoryMemberRepository")
     MemberRepository memberRepository() {
         return new MemoryMemberRepository();

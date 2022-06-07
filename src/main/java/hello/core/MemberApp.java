@@ -11,9 +11,6 @@ public class MemberApp {
 
     public static void main(String[] args) {
 
-//        AppConfig appConfig = new AppConfig();
-//        MemberService memberService = appConfig.memberService();
-
         //Appconfig의 환경설정을 spring bean에 등록 및 관리
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
         MemberService memberService = applicationContext.getBean("memberService", MemberService.class);
