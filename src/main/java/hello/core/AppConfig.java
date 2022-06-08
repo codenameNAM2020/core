@@ -17,22 +17,6 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AppConfig {
 
-    //@Bean memberService -> new MemoryMemberRepository()
-    //@Bean orderService -> new MemoryMemberRepository()
-
-    //call AppConfig.memberService
-    //call AppConfig.memberRepository
-    //call AppConfig.memberRepository
-    //call AppConfig.orderService
-    //call AppConfig.memberRepository
-
-    //call AppConfig.memberService
-    //call AppConfig.memberRepository
-    //call AppConfig.orderService
-
-    //의존관계 자동 주입
-//    @Autowired MemberRepository memberRepository;
-
     //스프링 컨테이너에 등록
     @Bean
     // 생성자 주입

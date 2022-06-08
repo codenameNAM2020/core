@@ -15,10 +15,6 @@ public class OrderServiceImpl implements OrderService {
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;
 
-    // 생성자가 하나만 있다면 @Autowired가 생략된 것과 같음 (자동으로 의존관계가 주입됨)
-    // 생성자는 spring life cycle에서 자동으로 등록됨
-    // -> 생성자 먼저 등록되기 때문에 먼저 출력됨
-    // @RequiredArgsConstructor로 생성자 생략
     @Autowired
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
