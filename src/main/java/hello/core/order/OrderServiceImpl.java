@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-@RequiredArgsConstructor    // final이 붙은 파라미터를 가진 생성자를 생성함
+//@RequiredArgsConstructor    // final이 붙은 파라미터를 가진 생성자를 생성함
 public class OrderServiceImpl implements OrderService {
 
     //값이 변하지 않음 (final)
@@ -19,11 +19,11 @@ public class OrderServiceImpl implements OrderService {
     // 생성자는 spring life cycle에서 자동으로 등록됨
     // -> 생성자 먼저 등록되기 때문에 먼저 출력됨
     // @RequiredArgsConstructor로 생성자 생략
-//    @Autowired
-//    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
-//        this.memberRepository = memberRepository;
-//        this.discountPolicy = discountPolicy;
-//    }
+    @Autowired
+    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+        this.memberRepository = memberRepository;
+        this.discountPolicy = discountPolicy;
+    }
 
     @Override
     public Order createOrder(Long memberId, String itemName, int itemPrice) {
