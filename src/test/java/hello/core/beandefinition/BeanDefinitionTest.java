@@ -9,9 +9,6 @@ import org.springframework.context.support.GenericXmlApplicationContext;
 
 public class BeanDefinitionTest {
 
-//    AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
-
-//    // ApplicationContext 사용시, getBeanDefinition을 받아올 수 없음
     GenericXmlApplicationContext ac = new GenericXmlApplicationContext("appConfig.xml");
 
     @Test
