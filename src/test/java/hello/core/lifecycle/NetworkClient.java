@@ -9,8 +9,6 @@ public class NetworkClient {
 
     public NetworkClient() {
         System.out.println("생성자 호출, url = " + url);
-//        connect();
-//        call("초기화 연결 메시지");
     }
 
     public void setUrl(String url) {
@@ -30,19 +28,6 @@ public class NetworkClient {
     public void disconnect() {
         System.out.println("close = " + url);
     }
-
-//    @Override   //implements InitializingBean
-//    public void afterPropertiesSet() throws Exception { //의존관계 주입이 끝나면 호출
-//        System.out.println("NetworkClient.afterPropertiesSet");
-//        connect();
-//        call("초기화 연결 메시지");
-//    }
-//
-//    @Override   //implements DisposableBean
-//    public void destroy() throws Exception {
-//        System.out.println("NetworkClient.destroy");
-//        disconnect();
-//    }
 
     @PostConstruct
     public void init() {
