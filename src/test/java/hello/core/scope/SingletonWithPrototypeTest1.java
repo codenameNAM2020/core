@@ -45,15 +45,11 @@ public class SingletonWithPrototypeTest1 {
     @Scope("singleton")
 //    @RequiredArgsConstructor  //생성자 자동 생성
     static class ClientBean {
-//        private final PrototypeBean prototypeBean;  //생성시점에 주입 x01
 
         @Autowired
-//        private ObjectProvider<PrototypeBean> prototypeBeanProvider;
-//        private ObjectFactory<PrototypeBean> prototypeBeanProvider;
         private Provider<PrototypeBean> prototypeBeanProvider;
 
         public int logic() {
-//            PrototypeBean prototypeBean = prototypeBeanProvider.getObject();
             PrototypeBean prototypeBean = prototypeBeanProvider.get();
             prototypeBean.addCount();
             int count = prototypeBean.getCount();
